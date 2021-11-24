@@ -1,0 +1,11 @@
+# SVN日志导出工具
+# 目录
+svnPath: E:\doc\Excel\China\0.8.0\Development\Excel
+
+# 版本号
+svnVersion:
+  from: 66096
+  to: 66104
+
+# 输出目录
+output: E:\comment.xlsx
