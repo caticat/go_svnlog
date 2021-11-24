@@ -2,10 +2,19 @@ package main
 
 import (
 	"log"
+	"os"
 	"os/exec"
 )
 
 func main() {
+	// 日志文件
+	fLog, err := os.Create("svnlog.log")
+	if err != nil {
+		log.Fatal("create log file failed.")
+	}
+	defer fLog.Close()
+	log.SetOutput(fLog)
+
 	// 读配置
 	ptrConfig := NewConfig()
 	if err := ptrConfig.Load(); err != nil {
